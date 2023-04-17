@@ -61,6 +61,7 @@ header {
     color: black;
     border-bottom: 4px solid #08A6E4;
 }
+
 main {
     padding-top: 130px;
     box-sizing: border-box;
@@ -103,4 +104,51 @@ main a {
     font-weight: 700;
     font-size: 16px;
     border-radius: 40px;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.statistics {
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.numbers {
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.first_stat img,
+.third_stat img {
+    width: 52px;
+    height: 48px;
+}
+
+.second_stat img {
+    width: 65px;
+    height: 37px;
+    margin-bottom: 11px;
+}
+
+.statistics_title {
+    font-family: var(---raleway_font);
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.numbers img + p {
+    color: #000000;
+    font-family: var(---raleway_font);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.first_stat,
+.second_stat,
+.third_stat {
+    flex-direction: column;
+    justify-content: space-around;
 }
