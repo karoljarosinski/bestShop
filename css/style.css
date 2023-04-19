@@ -78,8 +78,6 @@ h1 {
 }
 
 .description {
-    width: 384px;
-    height: 22px;
     font-family: var(---open_sans_font);
     font-weight: 400;
     font-size: 16px;
@@ -177,6 +175,8 @@ h2 {
 .articles {
     background-color: #F7F7F7;
     padding-top: 105px;
+    box-sizing: border-box;
+    height: 1395px;
 }
 
 .first_stat:before {
@@ -196,15 +196,30 @@ h2 {
 }
 
 .container div {
-    width: 100%;
-    padding-left: 36px;
     background-color: white;
     margin-bottom: 37px;
+    box-sizing: border-box;
+    justify-content: space-around;
 }
 
 div.macbook_photo {
     box-sizing: border-box;
     padding-top: 113px;
+    position: relative;
+    z-index: 1;
+}
+
+div.macbook_photo:before {
+    content: "";
+    width: 180px;
+    height: 180px;
+    background-color: #FB3B64;
+    border-radius: 41px;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: 77px;
+    left: 200px;
+    z-index: -1;
 }
 
 div.second_article {
@@ -228,4 +243,179 @@ div.iphone_photo:before {
 .iphone_photo img {
     position: relative;
     z-index: 1;
+}
+
+div.trumpet_photo {
+    background-color: #F7F7F7;
+}
+
+.trumpet_photo img {
+    padding-top: 98px;
+    position: absolute;
+    padding-right: 82px;
+}
+
+div.third_article {
+    background-color: #F7F7F7;
+    padding-left: 0;
+    justify-content: space-between;
+}
+
+div.third_article .article_content {
+    height: 370px;
+    background-color: white;
+    padding-left: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 623px;
+}
+
+div.trumpet_photo:before {
+    content: "";
+    width: 440px;
+    height: 370px;
+    background-color: #55DFB4;
+    position: relative;
+}
+
+.articles .description {
+    width: 416px;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing h2 {
+    padding-bottom: 50px;
+}
+
+.pricing_container {
+    width: 1266px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.pricing_types {
+    justify-content: space-evenly;
+}
+
+.pricing_types div {
+    margin: 0 27px;
+}
+
+.pricing_basic,
+.pricing_premium {
+    width: 372px;
+    height: 461px;
+    box-sizing: border-box;
+    border-radius: 18px;
+}
+
+.pricing_basic {
+    border: 1px solid #FB3B64;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing_premium {
+    border: 1px solid #55DFB4;
+}
+
+.pricing_professional {
+    width: 405px;
+    height: 500px;
+    box-sizing: border-box;
+    border: 1px solid #07ACE6;
+    border-radius: 18px;
+}
+
+h3 {
+    font-family: var(---raleway_font);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 34px;
+}
+
+h3.pricing_professional {
+    font-size: 21px;
+}
+
+.prices {
+    padding-top: 14px;
+    text-align: center;
+    font-family: var(---open_sans_font);
+    font-size: 46px;
+    font-weight: 300;
+}
+
+.pricing_basic .prices {
+    color: #FB3B64;
+}
+
+.pricing_professional .prices {
+    color: #07ACE6;
+}
+
+.pricing_premium .prices {
+    color: #07ACE6;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 16px;
+    font-family: var(---open_sans_font);
+    color: #B2B2B2;
+    font-size: 14px;
+}
+
+.checkbox span {
+    height: 11px;
+    width: 11px;
+    border: 1px solid #55DFB4;
+    margin-right: 15px;
+    border-radius: 2px;
+    font-family: var(---open_sans_font);
+    cursor: context-menu;
+}
+
+.checkbox input:checked + span {
+    background-image: url("../images/Checkmark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.unchecked:before {
+    content: "x";
+    height: 11px;
+    width: 11px;
+    color: red;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unchecked span {
+    border: 1px solid red;
+    margin-right: 15px;
+    border-radius: 2px;
+    font-family: var(---open_sans_font);
+    cursor: context-menu;
+    position: absolute;
 }
