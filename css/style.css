@@ -300,11 +300,13 @@ div.trumpet_photo:before {
     padding-top: 100px;
 }
 
-.pricing_types {
+.pricing_types,
+.pricing_types div {
     justify-content: space-evenly;
 }
 
 .pricing_types div {
+    padding-bottom: 80px;
     margin: 0 27px;
 }
 
@@ -314,13 +316,12 @@ div.trumpet_photo:before {
     height: 461px;
     box-sizing: border-box;
     border-radius: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing_basic {
     border: 1px solid #FB3B64;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .pricing_premium {
@@ -333,6 +334,8 @@ div.trumpet_photo:before {
     box-sizing: border-box;
     border: 1px solid #07ACE6;
     border-radius: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
@@ -376,7 +379,8 @@ h3.pricing_professional {
 
 .checkbox {
     display: flex;
-    margin-top: 24px;
+    justify-content: center;
+    margin-top: 20px;
     margin-left: 16px;
     font-family: var(---open_sans_font);
     color: #B2B2B2;
@@ -399,7 +403,7 @@ h3.pricing_professional {
     background-position: center;
 }
 
-.unchecked:before {
+.unchecked span:before {
     content: "x";
     height: 11px;
     width: 11px;
@@ -407,15 +411,45 @@ h3.pricing_professional {
     z-index: 1;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .unchecked span {
     border: 1px solid red;
-    margin-right: 15px;
     border-radius: 2px;
     font-family: var(---open_sans_font);
     cursor: context-menu;
-    position: absolute;
+}
+
+.pricing a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 115px;
+    font-family: var(---open_sans_font);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pricing_basic a {
+    background-color: #EB476E;
+}
+
+.pricing_professional a {
+    background-color: #07ACE6;
+    width: 165px;
+}
+
+.pricing_premium a {
+    background-color: #55DFB4;
 }
