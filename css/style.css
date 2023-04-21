@@ -70,8 +70,6 @@ main {
 }
 
 h1 {
-    width: 226px;
-    height: 57px;
     font-family: var(---raleway_font);
     font-weight: 400;
     font-size: 49px;
@@ -414,6 +412,7 @@ h3.pricing_professional {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    bottom: 1px;
 }
 
 .unchecked span {
@@ -452,4 +451,98 @@ h3.pricing_professional {
 
 .pricing_premium a {
     background-color: #55DFB4;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+div.form_container {
+    width: 896px;
+    height: 376px;
+    box-sizing: border-box;
+    padding-top: 155px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+}
+
+.form_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form_checkbox {
+    cursor: pointer;
+    display: flex;
+    padding-bottom: 20px;
+    font-family: var(---open_sans_font);
+    color: #707070;
+    font-size: 12px;
+}
+
+.form_checkbox span {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+    border: 1px solid #D1D1D1;
+    cursor: pointer;
+    margin-right: 15px;
+    border-radius: 8px;
+    font-family: var(---open_sans_font);
+}
+
+.form_checkbox input:checked + span {
+    background-image: url("/images/Checkmark.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    font-family: var(---open_sans_font);
+    font-weight: 600;
+    font-size: 16px;
+    color: #A5A5A5;
+}
+
+form label:not(.form_checkbox) {
+    font-family: var(---open_sans_font);
+    font-weight: 700;
+    font-size: 11px;
+    color: #08A6E4;
+}
+
+form input:not(.form_checkbox) {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-width: 2px;
+    border-bottom-color: grey;
+    padding-top: 42px;
+    margin-bottom: 42px;
+}
+
+button {
+    background-color: #08A6E4;
+    border: hidden;
+    color: white;
+    border-radius: 35px;
+    width: 226px;
+    height: 57px;
+    align-self: flex-end;
+    font-family: var(---open_sans_font);
+    font-weight: 700;
+    font-size: 13px;
+    padding:20px 97px 19px 97px;
 }
