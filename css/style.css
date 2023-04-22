@@ -75,10 +75,7 @@ h1 {
 main a {
     text-decoration: none;
     background-color: #08A6E4;
-    width: 440px;
-    height: 67px;
-    padding-top: 22px;
-    padding-bottom: 23px;
+    padding: 23px 157px;
     box-sizing: border-box;
     color: white;
     font-weight: 700;
@@ -173,18 +170,15 @@ img[alt='catalog'] {
     box-sizing: border-box;
 }
 
-.articles_container {
-    width: 1124px;
-}
-
 .articles_container > div {
     background-color: white;
-    margin-bottom: 37px;
     justify-content: space-around;
+    margin: 0 250px 37px 250px;
 }
 
-.first_article .article_content {
-    margin: 91px 169px 91px 35px;
+.first_article .article_content,
+.third_article .article_content {
+    margin-left: 35px;
 }
 
 .second_article .article_content {
@@ -193,7 +187,6 @@ img[alt='catalog'] {
 }
 
 div.macbook_photo {
-    box-sizing: border-box;
     padding: 113px 117px 38px 0;
     position: relative;
     z-index: 1;
@@ -238,10 +231,6 @@ div.iphone_photo:before {
     margin-bottom: 0;
 }
 
-.third_article .article_content {
-    margin: 0 35px;
-}
-
 div.trumpet_photo {
     background-color: #F7F7F7;
     position: relative;
@@ -283,10 +272,10 @@ div.trumpet_photo:before {
 }
 
 .pricing_types > div {
-    padding-top: 34px;
     border-radius: 18px;
     margin: 0 35px;
-    width: 372px;
+    width: 30%;
+    padding: 34px 111px 0 111px;
 }
 
 .pricing_basic {
@@ -401,7 +390,8 @@ h3.pricing_professional {
     font-family: var(---open_sans_font);
     font-size: 13px;
     font-weight: 700;
-    margin: 55px 111px 0;
+    /*margin: 55px 111px 0;*/
+    margin-top: 55px;
     padding: 16px 0;
 }
 
@@ -418,23 +408,19 @@ h3.pricing_professional {
 }
 
 .form {
-    display: flex;
-    justify-content: center;
     margin-bottom: 59px;
 }
 
 div.form_container {
-    width: 896px;
-    height: 376px;
     padding-top: 155px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 440px;
+    width: 50%;
 }
 
 .form_checkbox input {
