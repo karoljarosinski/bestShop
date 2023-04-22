@@ -488,8 +488,6 @@ button {
     border: hidden;
     color: white;
     border-radius: 35px;
-    width: 226px;
-    height: 57px;
     align-self: flex-end;
     font-family: var(---open_sans_font);
     font-weight: 700;
