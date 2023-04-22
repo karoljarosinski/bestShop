@@ -35,7 +35,7 @@ header {
     font-size: 32px;
 }
 
-ul li a{
+ul li a {
     padding: 28px 45px;
     text-transform: uppercase;
     text-decoration: none;
@@ -114,7 +114,7 @@ h2 {
     padding-top: 22px;
 }
 
-.numbers img + p + p{
+.numbers img + p + p {
     color: #A5A5A5;
     font-weight: 400;
     font-size: 17px;
@@ -265,6 +265,7 @@ div.trumpet_photo:before {
 .pricing {
     display: flex;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .pricing h2 {
@@ -272,49 +273,34 @@ div.trumpet_photo:before {
 }
 
 .pricing_container {
-    width: 1266px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
 }
 
-.pricing_types,
-.pricing_types div {
-    justify-content: space-evenly;
-}
-
-.pricing_types div {
-    padding-bottom: 80px;
-    margin: 0 27px;
-}
-
-.pricing_basic,
-.pricing_premium {
-    width: 372px;
-    height: 461px;
-    box-sizing: border-box;
-    border-radius: 18px;
+.pricing_types {
     display: flex;
-    flex-direction: column;
+}
+
+.pricing_types > div {
+    padding-top: 34px;
+    border-radius: 18px;
+    margin: 0 35px;
+    width: 372px;
 }
 
 .pricing_basic {
     border: 1px solid #FB3B64;
 }
 
-.pricing_premium {
-    border: 1px solid #55DFB4;
+.pricing_professional {
+    border: 1px solid #07ACE6;
+    box-shadow: 5px 10px 27px #07ACE629;
+    transform: scale(1.1);
 }
 
-.pricing_professional {
-    width: 405px;
-    height: 500px;
-    box-sizing: border-box;
-    border: 1px solid #07ACE6;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: column;
+.pricing_premium {
+    border: 1px solid #55DFB4;
 }
 
 h3 {
@@ -322,7 +308,7 @@ h3 {
     font-weight: 700;
     font-size: 20px;
     text-align: center;
-    padding-top: 34px;
+    margin-bottom: 14px;
 }
 
 h3.pricing_professional {
@@ -330,7 +316,6 @@ h3.pricing_professional {
 }
 
 .prices {
-    padding-top: 14px;
     text-align: center;
     font-family: var(---open_sans_font);
     font-size: 46px;
@@ -407,18 +392,17 @@ h3.pricing_professional {
     text-decoration: none;
     text-align: center;
     color: white;
-    width: 150px;
-    height: 50px;
     border-radius: 23px;
-    align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 115px;
+    top: 23px;
     font-family: var(---open_sans_font);
     font-size: 13px;
     font-weight: 700;
+    margin: 55px 111px 0;
+    padding: 16px 0;
 }
 
 .pricing_basic a {
@@ -427,7 +411,6 @@ h3.pricing_professional {
 
 .pricing_professional a {
     background-color: #07ACE6;
-    width: 165px;
 }
 
 .pricing_premium a {
@@ -525,7 +508,7 @@ button {
     font-family: var(---open_sans_font);
     font-weight: 700;
     font-size: 13px;
-    padding:20px 97px 19px 97px;
+    padding: 20px 97px 19px 97px;
 }
 
 footer {
