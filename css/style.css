@@ -234,9 +234,18 @@ div.iphone_photo:before {
     z-index: 1;
 }
 
+.third_article {
+    margin-bottom: 0;
+}
+
+.third_article .article_content {
+    margin: 0 35px;
+}
+
 div.trumpet_photo {
     background-color: #F7F7F7;
     position: relative;
+    border-left: 61px solid #F7F7F7;
 }
 
 .trumpet_photo img {
@@ -245,38 +254,13 @@ div.trumpet_photo {
     z-index: 1;
 }
 
-div.third_article {
-    background-color: #F7F7F7;
-    justify-content: space-between;
-    margin-bottom: 0;
-}
-
-div.third_article .article_content {
-    height: 370px;
-    background-color: white;
-    padding-left: 37px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 123px;
-}
-
-.third_article .description {
-    padding-right: 35px;
-}
-
 div.trumpet_photo:before {
     content: "";
-    width: 440px;
-    height: 370px;
     background-color: #55DFB4;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: -62px;
 }
-
-/*.articles .description {*/
-/*    width: 416px;*/
-/*}*/
 
 .pricing {
     display: flex;
