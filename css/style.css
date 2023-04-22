@@ -93,12 +93,12 @@ main img {
 .statistics {
     flex-direction: column;
     margin-top: 100px;
+    padding: 100px 0;
 }
 
 .numbers {
     justify-content: space-evenly;
-    margin-top: 100px;
-    margin-bottom: 121px;
+    padding-top: 100px;
     width: 100%;
 }
 
@@ -111,8 +111,7 @@ h2 {
     color: #000000;
     font-weight: 800;
     font-size: 20px;
-    margin-top: 15px;
-    margin-bottom: 19px;
+    padding-top: 22px;
 }
 
 .numbers img + p + p{
@@ -120,10 +119,19 @@ h2 {
     font-weight: 400;
     font-size: 17px;
     text-align: center;
+    padding-top: 19px;
 }
 
 img[alt='eye'] {
-    margin-top: 15px;
+    padding-top: 15px;
+}
+
+img[alt='person'] {
+    margin-top: 3px;
+}
+
+img[alt='catalog'] {
+    margin-top: 6px;
 }
 
 .first_stat,
@@ -161,25 +169,32 @@ img[alt='eye'] {
 
 .articles {
     background-color: #F7F7F7;
-    padding-top: 105px;
+    padding: 105px 0;
     box-sizing: border-box;
-    height: 1395px;
 }
 
-.container {
+.articles_container {
     width: 1124px;
 }
 
-.container div {
+.articles_container > div {
     background-color: white;
     margin-bottom: 37px;
-    box-sizing: border-box;
     justify-content: space-around;
+}
+
+.first_article .article_content {
+    margin: 91px 169px 91px 35px;
+}
+
+.second_article .article_content {
+    margin-left: 92px;
+    margin-right: 20px;
 }
 
 div.macbook_photo {
     box-sizing: border-box;
-    padding-top: 113px;
+    padding: 113px 117px 38px 0;
     position: relative;
     z-index: 1;
 }
@@ -192,8 +207,8 @@ div.macbook_photo:before {
     border-radius: 41px;
     position: absolute;
     transform: rotate(45deg);
-    bottom: 77px;
-    left: 200px;
+    left: 250px;
+    top: 80px;
     z-index: -1;
 }
 
@@ -202,8 +217,7 @@ div.second_article {
 }
 
 div.iphone_photo {
-    box-sizing: border-box;
-    padding-top: 29px;
+    padding: 29px 0 13px 35px;
 }
 
 div.iphone_photo:before {
@@ -222,18 +236,19 @@ div.iphone_photo:before {
 
 div.trumpet_photo {
     background-color: #F7F7F7;
+    position: relative;
 }
 
 .trumpet_photo img {
     padding-top: 98px;
-    position: absolute;
     padding-right: 82px;
+    z-index: 1;
 }
 
 div.third_article {
     background-color: #F7F7F7;
-    padding-left: 0;
     justify-content: space-between;
+    margin-bottom: 0;
 }
 
 div.third_article .article_content {
@@ -243,7 +258,11 @@ div.third_article .article_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 623px;
+    margin-right: 123px;
+}
+
+.third_article .description {
+    padding-right: 35px;
 }
 
 div.trumpet_photo:before {
@@ -251,12 +270,13 @@ div.trumpet_photo:before {
     width: 440px;
     height: 370px;
     background-color: #55DFB4;
-    position: relative;
+    position: absolute;
+    left: -62px;
 }
 
-.articles .description {
-    width: 416px;
-}
+/*.articles .description {*/
+/*    width: 416px;*/
+/*}*/
 
 .pricing {
     display: flex;
