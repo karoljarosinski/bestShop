@@ -1,0 +1,16 @@
+@import "../settings/variables";
+
+.buttons {
+  text-decoration: none;
+  background-color: $primary-button-color;
+  //padding: 1.5rem 157px;
+  color: white;
+  height: 3rem;
+  width: 80%;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

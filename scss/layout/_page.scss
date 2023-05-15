@@ -1,0 +1,4 @@
+@import "../settings/variables";
+h3 {
+  @include setFontForElement($raleway_font, 2rem, 400);
+}

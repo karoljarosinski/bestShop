@@ -1,0 +1,29 @@
+@import "../layout/_fonts.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    @include setFontForElement($raleway_font, 2.2rem, 400);
+  }
+
+  p {
+    @include setFontForElement($open_sants_font, 1rem, 400);
+  }
+
+  .buttons {
+    @include tablet {
+      width: 25%;
+    }
+  }
+}

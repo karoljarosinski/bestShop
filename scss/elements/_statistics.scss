@@ -1,0 +1,36 @@
+@import "../settings/variables";
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+  .numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .first_stat .stat_image::before {
+      background-color: blue;
+    }
+
+    .stat_image {
+      position: relative;
+      &::before {
+        content: "";
+        height: 3rem;
+        width: 3rem;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

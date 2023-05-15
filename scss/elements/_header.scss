@@ -1,0 +1,93 @@
+@import "../settings/variables";
+@import "../layout/fonts";
+
+header {
+  //position: fixed;
+  height: 4.375rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 3px 6px $header-box-shadow;
+  color: $header-color;
+
+  &:has(.menu-btn:checked) {
+    flex-direction: column;
+
+    .fa-sharp {
+      display: none;
+    }
+
+    .fa-x {
+      display: flex;
+    }
+
+    h1 {
+      align-self: flex-start;
+    }
+  }
+
+  h1 {
+    height: 100%;
+    @include setFontForElement($raleway_font, 2rem, $header-font-weight);
+    color: $header-color;
+    align-self: center;
+    padding: 1.063rem 0 1rem 1.563rem;
+  }
+
+  .menu-btn {
+    display: none;
+
+    &:checked ~ ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 4.5rem;
+      width: 100vw;
+      padding: 1.563rem;
+      box-shadow: 0px 3px 6px $header-box-shadow;
+    }
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 1.563rem;
+    right: 2rem;
+
+    .fa-x {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  ul {
+    display: none;
+    color: $navigation-text-color;
+    @include setFontForElement($open_sants_font, 0.7rem, 700);
+    gap: 1rem;
+
+    li:hover {
+      color: $navigation-text-hover-color;
+    }
+
+    @include tablet {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-right: 1.563rem;
+      li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 1rem;
+
+        &:hover {
+          border-bottom: 0.2rem solid $navigation-border-bottom;
+        }
+      }
+    }
+  }
+}

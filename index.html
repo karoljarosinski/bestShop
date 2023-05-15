@@ -5,228 +5,243 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="scss/main.scss">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap"
         rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <title>Best shop</title>
 </head>
 <body>
-<header class="flex_center">
-  <div class="header_container flex_center">
-    <p class="logo_text raleway_font">BestShop</p>
-    <ul class="flex_center opensans_font">
-      <li><a href="#">Why us</a></li>
-      <li><a href="#">Benefits</a></li>
-      <li><a href="#">Prices</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
+<header>
+  <h1>BestShop</h1>
+  <input class="menu-btn" type="checkbox" id="menu-btn"/>
+  <label class="menu-icon" for="menu-btn">
+    <i class="fa-sharp fa-solid fa-bars"></i>
+    <i class="fa-solid fa-x"></i>
+  </label>
+  <ul class="flex_center opensans_font">
+    <li>Why us</li>
+    <li>Benefits</li>
+    <li>Prices</li>
+    <li>Contact</li>
+  </ul>
 </header>
 <main>
-  <div class="content flex_center">
-    <h1 class="flex_center raleway_font">Sell More!</h1>
-    <p class="description opensans_font">Open shop on our platform and increase your sales</p>
-    <a href="#" class="flex_center opensans_font">Open your shop</a>
-  </div>
+  <h2>Sell More!</h2>
+  <p>Open shop on our platform and increase your sales</p>
+  <a href="#" class="buttons">Open your shop</a>
   <img src="/images/Background.png" alt="photo">
 </main>
-<section class="statistics flex_center">
-  <h2>The most popular sales platform in country</h2>
-  <div class="numbers flex_center raleway_font">
-    <div class="first_stat flex_center">
-      <img src="/images/Person.png" alt="person">
-      <p>100000+</p>
-      <p>daily entries</p>
-    </div>
-    <div class="second_stat flex_center">
-      <img src="/images/Eye.png" alt="eye">
-      <p>2000000+</p>
-      <p>seen products </br> every day</p>
-    </div>
-    <div class="third_stat flex_center">
-      <img src="/images/Catalog.png" alt="catalog">
-      <p>10000+</p>
-      <p>added posts </br> daily</p>
-    </div>
-  </div>
-</section>
-<section class="articles flex_center">
-  <div class="articles_container">
-    <div class="first_article flex_center">
-      <div class="article_content">
-        <h2>Be always first</h2>
-        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At</p>
+<section class="statistics">
+  <h3>The most popular sales platform in country</h3>
+  <div class="numbers">
+    <div class="first_stat">
+      <div class="stat_image">
+        <img src="/images/Person.png" alt="person">
       </div>
-      <div class="macbook_photo">
-        <img src="images/Macbook2.png" alt="macbook">
+      <div class="stat_description">
+        <p>100000+</p>
+        <p>daily entries</p>
       </div>
     </div>
-    <div class="second_article flex_center">
-      <div class="article_content">
-        <h2>Your shop is </br>where you are!</h2>
-        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At</p>
+    <div class="second_stat">
+      <div class="stat_image">
+        <img src="/images/Eye.png" alt="eye">
       </div>
-      <div class="iphone_photo">
-        <img src="images/iPhone2.png" alt="iphone">
+      <div class="stat_description">
+        <p>2000000+</p>
+        <p>seen products </br> every day</p>
       </div>
     </div>
-    <div class="third_article flex_center">
-      <div class="article_content">
-        <h2>Increase recognition </br>your brand!</h2>
-        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At</p>
+    <div class="third_stat">
+      <div class="stat_image">
+        <img src="/images/Catalog.png" alt="catalog">
       </div>
-      <div class="trumpet_photo flex_center">
-        <img src="images/Trumpet.png" alt="trumpet">
+      <div class="stat_description">
+        <p>10000+</p>
+        <p>added posts </br> daily</p>
       </div>
     </div>
   </div>
 </section>
-<section class="pricing">
-  <div class="pricing_container">
-    <h2>Pricing</h2>
-    <div class="pricing_types">
-      <div class="pricing_basic">
-        <h3>Basic</h3>
-        <p class="prices">$0</p>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          100 MB HDD
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          1 Subdomain
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          2 E-mails
-        </label>
-        <label class="checkbox unchecked">
-          <input type="checkbox" disabled>
-          <span></span>
-          Two years license
-        </label>
-        <label class="checkbox unchecked">
-          <input type="checkbox" disabled>
-          <span></span>
-          Full support
-        </label>
-        <a href="#">Begin</a>
-      </div>
-      <div class="pricing_professional">
-        <h3>Professional</h3>
-        <p class="prices">$25</p>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          500 MB HDD
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          2 Subdomain
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          5 E-mails
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          One year license
-        </label>
-        <label class="checkbox unchecked">
-          <input type="checkbox" disabled>
-          <span></span>
-          Full support
-        </label>
-        <a href="#">Begin</a>
-      </div>
-      <div class="pricing_premium">
-        <h3>Premium</h3>
-        <p class="prices">$60</p>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          2 GB HDD
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          5 Subdomain
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          20 E-mails
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disable checked>
-          <span></span>
-          Two years license
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" disabled checked>
-          <span></span>
-          Full support
-        </label>
-        <a href="#">Begin</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="form">
-  <div class="form_container">
-    <div class="question_banner">
-      <h1>Any questions?</h1>
-      <p class="description">Leave your email address or call us!</p>
-      <div class="contact">
-        <p class="contact_details">
-          <img src="/images/Mail Icon.svg" alt="mail">
-          info@bestshop.xyz</p>
-        <p class="contact_details">
-          <img src="/images/Phone Icon.svg" alt="phone">
-          123 456 789</p>
-      </div>
-    </div>
-    <form action="submit">
-      <label for="name">NAME</label>
-      <input type="text" id="name">
-      <label for="email">EMAIL</label>
-      <input type="text" id="email">
-      <label class="form_checkbox">
-        <input type="checkbox">
-        <span></span>
-        I hereby give consent for my personal data included in my application to be processed for the purposes of the
-        recruitment process under the European Parliament’s and Council of the European Union Regulation on the
-        Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the
-        free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
-      </label>
-      <button type="submit">SEND</button>
-    </form>
-  </div>
-</section>
-<footer>
-  <div class="logo_footer">
-    <p class="logo_text">BestShop</p>
-    <p class="copyright">© 2019 BestShop LTD, All Rights Reserved</p>
-  </div>
-  <div class="social">
-    <a href="https://twitter.com/" target="_blank"><img src="images/Twitter.svg" alt="twitter"></a>
-    <a href="https://facebook.com/" target="_blank"><img src="images/Facebook.svg" alt="facebook"></a>
-  </div>
-</footer>
+<!--<section class="articles flex_center">-->
+<!--  <div class="articles_container">-->
+<!--    <div class="first_article flex_center">-->
+<!--      <div class="article_content">-->
+<!--        <h2>Be always first</h2>-->
+<!--        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor-->
+<!--          invidunt ut labore et-->
+<!--          dolore magna aliquyam erat, sed diam voluptua. At</p>-->
+<!--      </div>-->
+<!--      <div class="macbook_photo">-->
+<!--        <img src="images/Macbook2.png" alt="macbook">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="second_article flex_center">-->
+<!--      <div class="article_content">-->
+<!--        <h2>Your shop is </br>where you are!</h2>-->
+<!--        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor-->
+<!--          invidunt ut labore et-->
+<!--          dolore magna aliquyam erat, sed diam voluptua. At</p>-->
+<!--      </div>-->
+<!--      <div class="iphone_photo">-->
+<!--        <img src="images/iPhone2.png" alt="iphone">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="third_article flex_center">-->
+<!--      <div class="article_content">-->
+<!--        <h2>Increase recognition </br>your brand!</h2>-->
+<!--        <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor-->
+<!--          invidunt ut labore et-->
+<!--          dolore magna aliquyam erat, sed diam voluptua. At</p>-->
+<!--      </div>-->
+<!--      <div class="trumpet_photo flex_center">-->
+<!--        <img src="images/Trumpet.png" alt="trumpet">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--<section id="pricing" class="pricing">-->
+<!--  <div class="pricing_container">-->
+<!--    <h2>Pricing</h2>-->
+<!--    <div class="pricing_types">-->
+<!--      <div class="pricing_basic">-->
+<!--        <h3>Basic</h3>-->
+<!--        <p class="prices">$0</p>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          100 MB HDD-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          1 Subdomain-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          2 E-mails-->
+<!--        </label>-->
+<!--        <label class="checkbox unchecked">-->
+<!--          <input type="checkbox" disabled>-->
+<!--          <span></span>-->
+<!--          Two years license-->
+<!--        </label>-->
+<!--        <label class="checkbox unchecked">-->
+<!--          <input type="checkbox" disabled>-->
+<!--          <span></span>-->
+<!--          Full support-->
+<!--        </label>-->
+<!--        <a href="#">Begin</a>-->
+<!--      </div>-->
+<!--      <div class="pricing_professional">-->
+<!--        <h3>Professional</h3>-->
+<!--        <p class="prices">$25</p>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          500 MB HDD-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          2 Subdomain-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          5 E-mails-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          One year license-->
+<!--        </label>-->
+<!--        <label class="checkbox unchecked">-->
+<!--          <input type="checkbox" disabled>-->
+<!--          <span></span>-->
+<!--          Full support-->
+<!--        </label>-->
+<!--        <a href="#">Begin</a>-->
+<!--      </div>-->
+<!--      <div class="pricing_premium">-->
+<!--        <h3>Premium</h3>-->
+<!--        <p class="prices">$60</p>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          2 GB HDD-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          5 Subdomain-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          20 E-mails-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disable checked>-->
+<!--          <span></span>-->
+<!--          Two years license-->
+<!--        </label>-->
+<!--        <label class="checkbox">-->
+<!--          <input type="checkbox" disabled checked>-->
+<!--          <span></span>-->
+<!--          Full support-->
+<!--        </label>-->
+<!--        <a href="#">Begin</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--<section class="form">-->
+<!--  <div class="form_container">-->
+<!--    <div class="question_banner">-->
+<!--      <h1>Any questions?</h1>-->
+<!--      <p class="description">Leave your email address or call us!</p>-->
+<!--      <div class="contact">-->
+<!--        <p class="contact_details">-->
+<!--          <img src="/images/Mail Icon.svg" alt="mail">-->
+<!--          info@bestshop.xyz</p>-->
+<!--        <p class="contact_details">-->
+<!--          <img src="/images/Phone Icon.svg" alt="phone">-->
+<!--          123 456 789</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <form action="submit">-->
+<!--      <label for="name">NAME</label>-->
+<!--      <input type="text" id="name">-->
+<!--      <label for="email">EMAIL</label>-->
+<!--      <input type="text" id="email">-->
+<!--      <label class="form_checkbox">-->
+<!--        <input type="checkbox">-->
+<!--        <span></span>-->
+<!--        I hereby give consent for my personal data included in my application to be processed for the purposes of the-->
+<!--        recruitment process under the European Parliament’s and Council of the European Union Regulation on the-->
+<!--        Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the-->
+<!--        free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)-->
+<!--      </label>-->
+<!--      <button type="submit">SEND</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</section>-->
+<!--<footer>-->
+<!--  <div class="logo_footer">-->
+<!--    <p class="logo_text">BestShop</p>-->
+<!--    <p class="copyright">© 2019 BestShop LTD, All Rights Reserved</p>-->
+<!--  </div>-->
+<!--  <div class="social">-->
+<!--    <a href="https://twitter.com/" target="_blank"><img src="images/Twitter.svg" alt="twitter"></a>-->
+<!--    <a href="https://facebook.com/" target="_blank"><img src="images/Facebook.svg" alt="facebook"></a>-->
+<!--  </div>-->
+<!--</footer>-->
 </body>
 </html>
