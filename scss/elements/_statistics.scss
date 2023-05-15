@@ -1,36 +1,65 @@
 @import "../settings/variables";
+@import "../layout/page";
 
 .statistics {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  gap: 2rem;
 
-  .numbers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-
-    .first_stat .stat_image::before {
-      background-color: blue;
-    }
-
+  .first_stat {
     .stat_image {
-      position: relative;
       &::before {
-        content: "";
-        height: 3rem;
-        width: 3rem;
-        background-color: red;
-        border-radius: 50%;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
+        background-color: $primary-page-color;
       }
     }
+  }
+
+  .second_stat {
+    .stat_image {
+      height: 3.25rem;
+
+      img {
+        top: 0.5rem;
+      }
+
+      &:before {
+        background-color: $eye-picture-background-color;
+      }
+    }
+  }
+
+  .third_stat {
+    .stat_image {
+      &::before {
+        background-color: $box-picture-background-color;
+      }
+    }
+  }
+
+  .stat_image {
+    position: relative;
+
+    img {
+      position: relative;
+      left: 1rem;
+    }
+
+    &::before {
+      content: "";
+      height: 3rem;
+      width: 3rem;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      margin: 0 auto;
+    }
+  }
+
+  .number {
+    @include setFontForElement($raleway_font, 1.25rem, 800);
+  }
+
+  .stat_description {
+    @include setFontForElement($raleway_font, 1rem, 400);
+    color: $grey-text-color;
   }
 }

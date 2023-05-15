@@ -1,0 +1,14 @@
+.articles {
+  box-sizing: border-box;
+  background-color: $articles-background;
+  padding: 3rem 0;
+  img {
+    width: 80%;
+  }
+
+  .card {
+    background-color: white;
+    margin: 0 2rem 3rem 2rem;
+    text-align: center;
+  }
+}
