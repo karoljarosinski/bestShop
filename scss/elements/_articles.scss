@@ -1,14 +1,96 @@
-.articles {
-  box-sizing: border-box;
+@import "../settings/mixins";
+@import "../settings/variables";
+@import "../layout/fonts";
+
+section.articles {
   background-color: $articles-background;
   padding: 3rem 0;
-  img {
-    width: 80%;
-  }
 
   .card {
     background-color: white;
-    margin: 0 2rem 3rem 2rem;
-    text-align: center;
+    margin: 0 2rem 3rem;
+
+    h3 {
+      padding: 2rem 0;
+    }
+
+    p {
+      @include setFontForElement($open_sants_font, 1rem, 400);
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    img {
+      width: 70%;
+      padding: 1rem;
+      @include big_phone {
+        width: 80%;
+      }
+    }
+
+    &:has([alt='trumpet']) {
+      flex-direction: column-reverse;
+      background: rgb(255,255,255);
+      background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0.6083683473389356) 50%, rgba(85,223,180,1) 50%);
+      @include big_phone {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 50%, rgba(85,223,180,1) 50%);
+        div:nth-child(2) {
+          border-right: 1.5rem solid $articles-background;
+        }
+      }
+
+    }
+
+    &:has([alt='macbook']),
+    &:has([alt='trumpet']) {
+      @include big_phone {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .photo {
+      position: relative;
+      z-index: 0;
+      align-self: center;
+      text-align: center;
+
+      &::before {
+        content: "";
+        z-index: -1;
+      }
+
+      &:has([alt = 'macbook'])::before {
+        width: 30%;
+        height: 65%;
+        background-color: $red-picture-page-color;
+        border-radius: 45%;
+        position: absolute;
+        transform: rotate(45deg);
+
+        @include big_phone {
+          width: 30%;
+          height: 50%;
+          top: 15%;
+          right: 15%;
+          border-radius: 20%;
+        }
+      }
+
+      &:has([alt = 'iphone'])::before {
+        background-color: $primary-page-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        width: 10rem;
+        height: 10rem;
+
+        @include big_phone {
+          width: 70%;
+          height: 80%;
+        }
+      }
+    }
   }
 }
