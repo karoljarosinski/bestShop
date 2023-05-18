@@ -19,6 +19,15 @@ section.form {
       color: map-get($page-colors, "grey");
       padding: 0.4rem 0;
     }
+    text-align: left;
+    @include big_phone {
+      text-align: center;
+      .contact {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+    }
   }
 
   form {
