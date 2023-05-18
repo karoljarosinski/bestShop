@@ -66,7 +66,7 @@ header {
   ul {
     display: none;
     color: $navigation-text-color;
-    @include setFontForElement($open_sants_font, 0.7rem, 700);
+    @include setFontForElement($open_sant_font, 0.7rem, 700);
     gap: 1rem;
 
     li:hover {

@@ -1,0 +1,135 @@
+@use "sass:list";
+@use "sass:map";
+@import "../settings/variables";
+@import "../layout/fonts";
+@import "../settings/mixins";
+
+$pricing_options: "pricing_basic", "pricing_professional", "pricing_premium";
+$price_color: map.get($page-colors, "red"), map.get($page-colors, "blue"), map.get($page-colors, "green");
+section.pricing {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  h3 {
+    @include big_phone {
+      margin-bottom: 2rem;
+    }
+  }
+
+  div:nth-child(2) {
+    gap: 2rem;
+    @include big_phone {
+      gap: 0;
+    }
+  }
+
+  @for $i from 1 through list.length($pricing_options) {
+    .#{list.nth($pricing_options, $i)} {
+      border-color: list.nth($price_color, $i);
+
+      p {
+        @include setFontForElement($open_sant_font, 3rem, 300);
+        color: list.nth($price_color, $i);
+      }
+
+      .buttons {
+        background-color: list.nth($price_color, $i)
+      }
+
+      @if (list.nth($pricing_options, $i) == "pricing_professional") {
+        box-shadow: 0 0.2rem 0.9rem map.get($page-colors, "blue");
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  [class*=pricing_] {
+    padding: 2rem 0;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    @include big_phone {
+      width: 90%;
+    }
+
+    .begin_button {
+      display: flex;
+      justify-content: center;
+
+      .buttons {
+        @include setFontForElement($open_sant_font, 0.9rem, 400);
+        width: 40%;
+        position: absolute;
+        top: 90%;
+        @include big_phone {
+          top: 95%;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 2rem;
+      @include big_phone {
+        flex-direction: column;
+      }
+
+      .type_price {
+        text-align: center;
+        @include big_phone {
+          margin-bottom: 4rem;
+        }
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        @include setFontForElement($open_sant_font, 1rem, 600);
+        @include big_phone {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    color: map.get($page-colors, "grey");
+    font-size: 14px;
+    input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+
+      &:checked ~ span {
+        background-image: url("../images/Checkmark.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &:not(:checked) ~ span {
+        border: 0.05rem solid red;
+        &:before {
+          content: "X";
+          color: red;
+          display: flex;
+          justify-content: center;
+        }
+
+      }
+    }
+    span {
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid #55DFB4;
+      margin-right: 1rem;
+      //border-radius: 2px;
+      cursor: context-menu;
+    }
+  }
+}

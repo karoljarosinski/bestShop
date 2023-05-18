@@ -12,10 +12,11 @@ section.articles {
 
     h3 {
       padding: 2rem 0;
+      text-align: left;
     }
 
     p {
-      @include setFontForElement($open_sants_font, 1rem, 400);
+      @include setFontForElement($open_sant_font, 1rem, 400);
       padding-bottom: 1rem;
       margin-bottom: 3rem;
     }
@@ -67,6 +68,7 @@ section.articles {
         border-radius: 45%;
         position: absolute;
         transform: rotate(45deg);
+        right: 15%;
 
         @include big_phone {
           width: 30%;
@@ -89,6 +91,7 @@ section.articles {
         @include big_phone {
           width: 70%;
           height: 80%;
+          left: 10%;
         }
       }
     }

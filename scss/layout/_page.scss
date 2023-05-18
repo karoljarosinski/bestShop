@@ -5,6 +5,18 @@ $column-base-width: 100% / $columns;
 
 h3 {
   @include setFontForElement($raleway_font, 2rem, 400);
+  text-align: center;
+}
+
+h4 {
+  @include setFontForElement($raleway_font, 1.5rem, 600);
+  text-align: center;
+  margin: 1rem;
+}
+
+[class*=pricing_] {
+  border: 0.05rem solid black;
+  border-radius: 1rem;
 }
 
 .container {

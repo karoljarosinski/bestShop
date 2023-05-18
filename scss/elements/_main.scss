@@ -18,7 +18,7 @@ main {
   }
 
   p {
-    @include setFontForElement($open_sants_font, 1rem, 400);
+    @include setFontForElement($open_sant_font, 1rem, 400);
   }
 
   .buttons {

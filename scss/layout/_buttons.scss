@@ -2,8 +2,7 @@
 
 .buttons {
   text-decoration: none;
-  background-color: $primary-button-color;
-  //padding: 1.5rem 157px;
+  background-color: map-get($page-colors, "blue");
   color: white;
   height: 3rem;
   width: 80%;

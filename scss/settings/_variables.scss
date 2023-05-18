@@ -1,12 +1,15 @@
+@use "sass:map";
+
+
 $header-font-weight: 300;
 $header-color: #08A6E4;
-$header-box-shadow:#00000029;
+$header-box-shadow: #00000029;
 $navigation-text-color: #A5A5A5;
 $navigation-text-hover-color: #000000;
 $navigation-border-bottom: #08A6E4;
 $primary-button-color: #08A6E4;
 
-$primary-page-color:#08A6E4;
+$primary-page-color: #08A6E4;
 $green-color: #55DFB4;
 
 $red-picture-page-color: #FB3B64;
@@ -15,3 +18,10 @@ $box-picture-background-color: #55DFB4;
 $grey-text-color: #A5A5A5;
 
 $articles-background: #F7F7F7;
+
+$page-colors: (
+        "red": #FB3B64,
+        "blue": #08A6E4,
+        "green": #55DFB4,
+        "grey": #A5A5A5
+);
