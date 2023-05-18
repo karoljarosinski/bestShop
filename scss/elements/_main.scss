@@ -1,4 +1,6 @@
 @import "../layout/_fonts.scss";
+@import "../settings/variables";
+@import "../settings/mixins";
 
 main {
   display: flex;
@@ -14,11 +16,11 @@ main {
   }
 
   h2 {
-    @include setFontForElement($raleway_font, 2.2rem, 400);
+    @include setFontForElement($raleway_font, 2.2rem, $font_weight_bold_400);
   }
 
   p {
-    @include setFontForElement($open_sant_font, 1rem, 400);
+    @include setFontForElement($open_sans_font, 1rem, $font_weight_bold_400);
   }
 
   .buttons {

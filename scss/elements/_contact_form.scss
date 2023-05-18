@@ -1,0 +1,83 @@
+@import "../settings/variables";
+@import "../settings/mixins";
+@import "../layout/fonts";
+
+section.form {
+  .contact_data {
+    h5 {
+      @include setFontForElement($raleway_font, 2.3rem, $font_weight_bold_400);
+      padding: 1rem 0;
+    }
+
+    .description {
+      @include setFontForElement($open_sans_font, 1rem, $font_weight_bold_400);
+      padding-bottom: 2rem;
+    }
+
+    .contact_details {
+      @include setFontForElement($open_sans_font, 1rem, $font_weight_bold_400);
+      color: map-get($page-colors, "grey");
+      padding: 0.4rem 0;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: map-get($page-colors, "blue");
+      @include setFontForElement($open_sans_font, 0.8rem, $font_weight_600);
+
+      &.form_checkbox {
+        display: flex;
+        gap: 0.5rem;
+        color: map-get($page-colors, "grey");
+        line-height: 1rem;
+        @include setFontForElement($open_sans_font, 0.7rem, $font_weight_600);
+
+        input:checked + span {
+          background-image: url("/images/Checkmark.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        span {
+          height: 24px;
+          width: 24px;
+          flex-shrink: 0;
+          border: 1px solid #D1D1D1;
+          cursor: pointer;
+          margin-right: 15px;
+          border-radius: 8px;
+          font-family: var(---open_sans_font);
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+      }
+    }
+
+    input {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-color: map-get($page-colors, "grey");
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      border: none;
+      margin: 1rem 0;
+      width: 60%;
+      align-self: flex-end;
+      @include setFontForElement($open_sans_font, 0.8rem, 700);
+    }
+  }
+}

@@ -1,15 +1,15 @@
 @import "../settings/variables";
 @import "../layout/fonts";
+@import "../settings/mixins";
 
 header {
-  //position: fixed;
   height: 4.375rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 3px 6px $header-box-shadow;
-  color: $header-color;
+  box-shadow: 0 3px 6px $header-box-shadow;
+  color: map-get($page-colors, "blue");
 
   &:has(.menu-btn:checked) {
     flex-direction: column;
@@ -29,8 +29,8 @@ header {
 
   h1 {
     height: 100%;
-    @include setFontForElement($raleway_font, 2rem, $header-font-weight);
-    color: $header-color;
+    @include setFontForElement($raleway_font, 2rem, $font_weight_normal_300);
+    color: map-get($page-colors, "blue");
     align-self: center;
     padding: 1.063rem 0 1rem 1.563rem;
   }
@@ -45,7 +45,7 @@ header {
       top: 4.5rem;
       width: 100vw;
       padding: 1.563rem;
-      box-shadow: 0px 3px 6px $header-box-shadow;
+      box-shadow: 0 3px 6px $header-box-shadow;
     }
   }
 
@@ -65,12 +65,12 @@ header {
 
   ul {
     display: none;
-    color: $navigation-text-color;
-    @include setFontForElement($open_sant_font, 0.7rem, 700);
+    color: map-get($page-colors, "grey");
+    @include setFontForElement($open_sans_font, 0.7rem, $font_weight_extra_bold_700);
     gap: 1rem;
 
     li:hover {
-      color: $navigation-text-hover-color;
+      color: map-get($page-colors, "black");
     }
 
     @include tablet {
