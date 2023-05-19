@@ -9,7 +9,7 @@ section.articles {
   img {
     width: 70%;
     padding-top: 3rem;
-    @include big_phone {
+    @include tablet {
       width: 80%;
       padding-bottom: 3rem;
     }
@@ -20,7 +20,7 @@ section.articles {
     padding-bottom: 1rem;
     margin-bottom: 3rem;
     position: relative;
-    @include big_phone {
+    @include tablet {
       &:after {
         content: "";
         background: black;
@@ -43,7 +43,7 @@ section.articles {
     margin: 0 2rem 3rem;
 
     &:has([alt = 'macbook']) {
-      @include big_phone {
+      @include tablet {
         flex-direction: row-reverse;
       }
 
@@ -67,7 +67,7 @@ section.articles {
     &:has([alt='trumpet']) {
       flex-direction: column-reverse;
       background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.6083683473389356) 50%, rgba(85, 223, 180, 1) 50%);
-      @include big_phone {
+      @include tablet {
         flex-direction: row-reverse;
         background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 50%, rgba(85, 223, 180, 1) 50%);
         div:nth-child(2) {
@@ -98,7 +98,7 @@ section.articles {
       right: 15%;
       top: 10%;
 
-      @include big_phone {
+      @include tablet {
         width: 30%;
         height: 50%;
         top: 15%;
@@ -116,7 +116,7 @@ section.articles {
       width: 12rem;
       height: 12rem;
 
-      @include big_phone {
+      @include tablet {
         width: 70%;
         height: 80%;
         left: 10%;

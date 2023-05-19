@@ -11,14 +11,14 @@ section.pricing {
   padding-bottom: 4rem;
 
   h3 {
-    @include big_phone {
+    @include tablet {
       margin-bottom: 2rem;
     }
   }
 
   div:nth-child(2) {
     gap: 2rem;
-    @include big_phone {
+    @include tablet {
       gap: 0;
     }
   }
@@ -48,7 +48,7 @@ section.pricing {
     height: 100%;
     position: relative;
     width: 100%;
-    @include big_phone {
+    @include tablet {
       width: 90%;
     }
 
@@ -61,7 +61,7 @@ section.pricing {
         width: 40%;
         position: absolute;
         top: 90%;
-        @include big_phone {
+        @include tablet {
           top: 95%;
         }
       }
@@ -72,13 +72,13 @@ section.pricing {
       justify-content: space-around;
       align-items: center;
       padding-bottom: 2rem;
-      @include big_phone {
+      @include tablet {
         flex-direction: column;
       }
 
       .type_price {
         text-align: center;
-        @include big_phone {
+        @include tablet {
           margin-bottom: 4rem;
         }
       }
@@ -89,7 +89,7 @@ section.pricing {
         align-items: flex-start;
         gap: 1rem;
         @include setFontForElement($open_sans_font, 1rem, $font_weight_600);
-        @include big_phone {
+        @include tablet {
           align-items: center;
         }
       }

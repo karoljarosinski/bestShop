@@ -7,6 +7,12 @@ $font_weight_extra_bold_700: 700;
 $font_weight_super_bold_800: 800;
 $box_shadow_color: #00000029;
 
+%display_flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 $page-colors: (
         "red": #FB3B64,
         "blue": #08A6E4,

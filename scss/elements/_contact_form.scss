@@ -24,7 +24,7 @@ section.form {
   .contact_data {
     margin-bottom: 2rem;
     text-align: left;
-    @include big_phone {
+    @include tablet {
       text-align: center;
       .contact {
         display: flex;
