@@ -3,6 +3,9 @@
 @import "../settings/mixins";
 
 header {
+  position: fixed;
+  z-index: 1;
+  background-color: map-get($page-colors, "white");
   height: 4.375rem;
   width: 100%;
   display: flex;
@@ -47,6 +50,7 @@ header {
       padding: 1.563rem;
       box-shadow: 0 3px 6px $box_shadow_color;
       animation: showHamburgerMenu 1s ease-in-out;
+      background-color: map-get($page-colors, "white");
     }
   }
 
