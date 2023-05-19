@@ -3,7 +3,9 @@
 @import "../layout/fonts";
 
 section.form {
+  padding-top: 2rem;
   .contact_data {
+    margin-bottom: 2rem;
     h5 {
       @include setFontForElement($raleway_font, 2.3rem, $font_weight_bold_400);
       padding: 1rem 0;
@@ -25,7 +27,7 @@ section.form {
       .contact {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 0.5rem;
       }
     }
   }

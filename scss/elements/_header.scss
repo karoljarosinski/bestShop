@@ -8,7 +8,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 3px 6px $header-box-shadow;
+  box-shadow: 0 3px 6px $box_shadow_color;
   color: map-get($page-colors, "blue");
 
   &:has(.menu-btn:checked) {
@@ -45,7 +45,7 @@ header {
       top: 4.5rem;
       width: 100vw;
       padding: 1.563rem;
-      box-shadow: 0 3px 6px $header-box-shadow;
+      box-shadow: 0 3px 6px $box_shadow_color;
     }
   }
 
