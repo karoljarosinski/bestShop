@@ -6,118 +6,121 @@ section.articles {
   background-color: map-get($page-colors, "dark_grey");
   padding: 3rem 0;
 
+  img {
+    width: 70%;
+    padding-top: 3rem;
+    @include big_phone {
+      width: 80%;
+      padding-bottom: 3rem;
+    }
+  }
+
+  p {
+    @include setFontForElement($open_sans_font, 1rem, $font_weight_bold_400);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+    @include big_phone {
+      &:after {
+        content: "";
+        background: black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0.1rem;
+        width: 70%;
+      }
+    }
+  }
+
+  h3 {
+    padding: 2rem 0;
+    text-align: left;
+  }
+
   .card {
     background-color: map-get($page-colors, "white");
     margin: 0 2rem 3rem;
 
-    h3 {
-      padding: 2rem 0;
-      text-align: left;
-    }
-
-    p {
-      @include setFontForElement($open_sans_font, 1rem, $font_weight_bold_400);
-      padding-bottom: 1rem;
-      margin-bottom: 3rem;
-      position: relative;
+    &:has([alt = 'macbook']) {
       @include big_phone {
-        &:after {
-          content: "";
-          background: black;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 0.1rem;
-          width: 70%;
-        }
+        flex-direction: row-reverse;
+      }
+
+      & p:after {
+        background: map-get($page-colors, "red");
       }
     }
 
-    &:has([alt = 'macbook']) p::after {
-        background: map-get($page-colors, "red");
+    &:has([alt = 'iphone']) {
+      & p::after {
+        background: map-get($page-colors, "blue");
+      }
     }
 
-    &:has([alt = 'iphone']) p::after {
-      background: map-get($page-colors, "blue");
-    }
-
-    &:has([alt = 'trumpet']) p::after {
-      background: map-get($page-colors, "green");
-    }
-
-    img {
-      width: 70%;
-      padding-top: 3rem;
-      @include big_phone {
-        width: 80%;
-        padding-bottom: 3rem;
+    &:has([alt = 'trumpet']) {
+      & p::after {
+        background: map-get($page-colors, "green");
       }
     }
 
     &:has([alt='trumpet']) {
       flex-direction: column-reverse;
-      background: rgb(255, 255, 255);
       background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.6083683473389356) 50%, rgba(85, 223, 180, 1) 50%);
       @include big_phone {
-        background: rgb(255, 255, 255);
+        flex-direction: row-reverse;
         background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 50%, rgba(85, 223, 180, 1) 50%);
         div:nth-child(2) {
           border-right: 1.5rem solid map-get($page-colors, "dark_grey");
         }
       }
+    }
+  }
 
+  .photo {
+    position: relative;
+    z-index: 0;
+    align-self: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      z-index: -1;
     }
 
-    &:has([alt='macbook']),
-    &:has([alt='trumpet']) {
+    &:has([alt = 'macbook'])::before {
+      width: 8rem;
+      height: 8rem;
+      background-color: map-get($page-colors, "red");
+      border-radius: 45%;
+      position: absolute;
+      transform: rotate(45deg);
+      right: 15%;
+      top: 10%;
+
       @include big_phone {
-        flex-direction: row-reverse;
-      }
-    }
-
-    .photo {
-      position: relative;
-      z-index: 0;
-      align-self: center;
-      text-align: center;
-
-      &::before {
-        content: "";
-        z-index: -1;
-      }
-
-      &:has([alt = 'macbook'])::before {
         width: 30%;
         height: 50%;
-        background-color: map-get($page-colors, "red");
-        border-radius: 45%;
-        position: absolute;
-        transform: rotate(45deg);
-        right: 15%;
-
-        @include big_phone {
-          width: 30%;
-          height: 50%;
-          top: 15%;
-          right: 10%;
-          border-radius: 20%;
-        }
+        top: 15%;
+        right: 10%;
+        border-radius: 20%;
       }
+    }
 
-      &:has([alt = 'iphone'])::before {
-        background-color: map-get($page-colors, "blue");
-        border-radius: 50%;
-        position: absolute;
-        top: 5%;
-        left: 20%;
-        width: 10rem;
-        height: 10rem;
+    &:has([alt = 'iphone'])::before {
+      background-color: map-get($page-colors, "blue");
+      border-radius: 50%;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 12rem;
+      height: 12rem;
 
-        @include big_phone {
-          width: 70%;
-          height: 80%;
-          left: 10%;
-        }
+      @include big_phone {
+        width: 70%;
+        height: 80%;
+        left: 10%;
+        top: 10%;
       }
     }
   }

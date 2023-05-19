@@ -1,4 +1,6 @@
 @import "../settings/variables";
+@import "../settings/mixins";
+@import "../layout/fonts";
 
 $columns: 12;
 $column-base-width: 100% / $columns;

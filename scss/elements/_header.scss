@@ -46,6 +46,7 @@ header {
       width: 100vw;
       padding: 1.563rem;
       box-shadow: 0 3px 6px $box_shadow_color;
+      animation: showHamburgerMenu 1s ease-in-out;
     }
   }
 
@@ -68,7 +69,6 @@ header {
     color: map-get($page-colors, "grey");
     @include setFontForElement($open_sans_font, 0.7rem, $font_weight_extra_bold_700);
     gap: 1rem;
-
     li:hover {
       color: map-get($page-colors, "black");
     }
@@ -85,9 +85,29 @@ header {
         padding: 0 1rem;
 
         &:hover {
-          border-bottom: 0.2rem solid $navigation-border-bottom;
+          border-bottom: 0.2rem solid map-get($page-colors, "blue");
+          animation: hoverNavigation 0.5s;
+          animation-fill-mode: forwards;
         }
       }
     }
+  }
+}
+
+@keyframes showHamburgerMenu {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes hoverNavigation {
+ 0% {
+   transform: scale(1);
+ }
+  100% {
+    transform: scale(1.1);
   }
 }
