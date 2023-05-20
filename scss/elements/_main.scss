@@ -23,10 +23,6 @@ main {
       }
     }
   }
-  //
-  //img {
-  //  width: 100%;
-  //}
 
   h2 {
     @include setFontForElement($raleway_font, 2.2rem, $font_weight_bold_400);
