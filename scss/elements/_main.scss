@@ -8,6 +8,15 @@ main {
   height: 100vh;
   gap: 2rem;
   text-align: center;
+  padding-top: 5rem;
+
+  .computer {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/Background@2x.png);
+    background-position: 50%;
+    background-size: cover;
+  }
 
   img {
     width: 100%;
