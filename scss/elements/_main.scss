@@ -11,16 +11,22 @@ main {
   padding-top: 5rem;
 
   .computer {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/Background@2x.png);
-    background-position: 50%;
-    background-size: cover;
-  }
 
-  img {
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    img {
+      width: 200%;
+      transform: translateX(-25%);
+      @include tablet {
+        width: 100%;
+        transform: none;
+      }
+    }
   }
+  //
+  //img {
+  //  width: 100%;
+  //}
 
   h2 {
     @include setFontForElement($raleway_font, 2.2rem, $font_weight_bold_400);
