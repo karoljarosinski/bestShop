@@ -4,7 +4,8 @@ const options = dropdownOptions.querySelectorAll('li');
 const selectedOption = dropdownSelect.querySelector('.select__input');
 const calcSummary = document.querySelector('.calc__summary');
 const calcPackage = calcSummary.querySelector('[data-id="package"]');
-
+const itemPrice = calcPackage.querySelector('.item__price');
+const packagePrices = document.querySelectorAll('.type_price')
 
 dropdownSelect.addEventListener('click', showDropdownOptions);
 options.forEach((el) => {
@@ -22,17 +23,21 @@ function showDropdownOptions(event) {
 function handleSelection(event) {
     event.stopPropagation();
     const selection = selectedOption.innerText = event.currentTarget.innerHTML;
+    const packagePrice = getPackagePrice(packagePrices, selection);
     calcPackage.querySelector('.item__calc').innerText = event.currentTarget.innerHTML;
     switch (selection) {
         case 'Basic':
-            calcPackage.querySelector('.item__price').innerText = '$0';
+            itemPrice.innerText = packagePrice;
             break;
         case 'Professional':
-            calcPackage.querySelector('.item__price').innerText = '$25';
+            itemPrice.innerText = packagePrice;
             break;
         case 'Premium':
-            calcPackage.querySelector('.item__price').innerText = '$60';
+            itemPrice.innerText = packagePrice;
     }
     calcPackage.style.display = 'block';
     dropdownOptions.style.display = 'none';
+}
+function getPackagePrice(packages, packageName) {
+    return Array.from(packages).find(el => el.textContent.includes(packageName)).querySelector('p').innerHTML;
 }
