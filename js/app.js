@@ -23,18 +23,18 @@ calcCheckboxes.forEach(el => el.addEventListener('click', handleCheckboxClick));
 
 function handleTyping(event) {
     if (event.target.id === 'products') {
-        productsCalc.style.display = 'flex';
-        productsCalc.querySelector('.item__calc').innerText = `${event.target.value} * $0.5`;
-        productsCalc.querySelector('.item__price').innerText = '$' + event.target.value * 0.5;
+        showElement(productsCalc, true);
+        setItemCalcForElement(productsCalc, `${event.target.value} * $0.5`);
+        setPriceForElement(productsCalc, `$ ${event.target.value * 0.5}`)
         if (event.target.value === '') {
-            productsCalc.style.display = 'none';
+            showElement(productsCalc, false);
         }
     } else {
-        ordersCalc.style.display = 'flex';
-        ordersCalc.querySelector('.item__calc').innerText = `${event.target.value} * $0.5`;
-        ordersCalc.querySelector('.item__price').innerText = '$' + event.target.value * 0.5;
+        showElement(ordersCalc, true);
+        setItemCalcForElement(ordersCalc, `${event.target.value} * $0.5`);
+        setPriceForElement(ordersCalc, `$ ${event.target.value * 0.5}`)
         if (event.target.value === '') {
-            ordersCalc.style.display = 'none';
+            showElement(ordersCalc, false);
         }
     }
     totalPrice.innerText = '$' + getTotalPrice();
@@ -43,21 +43,21 @@ function handleTyping(event) {
 function handleCheckboxClick(event) {
     if (event.target.id === 'accounting') {
         if (event.target.checked) {
-            accountingCalc.style.display = 'flex';
-            accountingCalc.querySelector('.item__price').innerText = '$35';
+            showElement(accountingCalc, true);
+            setPriceForElement(accountingCalc, '$35');
             totalPrice.innerText = '$' + getTotalPrice();
         } else {
-            accountingCalc.style.display = 'none';
-            accountingCalc.querySelector('.item__price').innerText = '$0';
+            showElement(accountingCalc, false);
+            setPriceForElement(accountingCalc, '$0');
         }
     }
     if (event.target.id === 'rental') {
         if (event.target.checked) {
-            rentalCalc.style.display = 'flex';
-            rentalCalc.querySelector('.item__price').innerText = '$5';
+            showElement(rentalCalc, true);
+            setPriceForElement(rentalCalc, '$5');
         } else {
-            rentalCalc.style.display = 'none';
-            rentalCalc.querySelector('.item__price').innerText = '$0';
+            showElement(rentalCalc, false);
+            setPriceForElement(rentalCalc, '$0');
         }
     }
     totalPrice.innerText = '$' + getTotalPrice();
@@ -67,7 +67,7 @@ function showDropdownOptions() {
     if (dropdownOptions.style.display === 'none' || dropdownOptions.getAttribute('style') === null) {
         dropdownOptions.style.display = 'block';
     } else {
-        dropdownOptions.style.display = 'none';
+        showElement(dropdownOptions, false);
     }
 }
 
@@ -76,8 +76,8 @@ function handleSelection(event) {
     const selection = event.currentTarget.innerHTML;
     selectedOption.innerText = selection;
     const selectedPrice = getPackagePrice(packagesPriceInfo, selection);
-    packageCalc.querySelector('.item__calc').innerText = event.currentTarget.innerHTML;
-    packageCalc.querySelector('.item__price').innerText = selectedPrice;
+    setItemCalcForElement(packageCalc, event.currentTarget.innerHTML);
+    setPriceForElement(packageCalc, selectedPrice);
     packageCalc.style.display = 'flex';
     dropdownOptions.style.display = 'none';
     totalPrice.innerText = '$' + getTotalPrice();
@@ -92,4 +92,16 @@ function getTotalPrice() {
     const allPrices = calcSummary.querySelectorAll('.item__price');
     Array.from(allPrices).forEach(el => sum += +el.innerHTML.replace('$', ''));
     return sum;
+}
+
+function setPriceForElement(element, text) {
+    element.querySelector('.item__price').innerText = text;
+}
+
+function setItemCalcForElement(element, text) {
+    element.querySelector('.item__calc').innerText = text;
+}
+
+function showElement(element, boolean) {
+    boolean ? element.style.display = 'flex' : element.style.display = 'none';
 }
