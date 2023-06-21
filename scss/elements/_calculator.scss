@@ -1,0 +1,196 @@
+@use "sass:map";
+@import "../settings/variables";
+@import "../settings/mixins";
+@import "../elements/pricing";
+
+.calc {
+  padding: 80px 0;
+  background-color: map.get($page-colors, "dark_grey");
+
+  @include tablet {
+    padding: 30px 15px;
+  }
+
+  &__columns {
+    max-width: 865px;
+    margin: 50px auto 0;
+    display: flex;
+  }
+
+  &__form {
+    width: 50%;
+    margin-right: 20px;
+    margin-left: 3rem;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+
+  &__input input,
+  &__select .select__input {
+    color: map-get($page-colors, "grey");
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid map.get($page-colors, "blue");
+    padding: 11px 20px;
+    line-height: 1em;
+    font-size: 0.8125rem;
+    box-shadow: 0 3px 6px map.get($page-colors, "blue");
+    margin-bottom: 20px;
+    background-color: map.get($page-colors, "white");
+  }
+
+  &__input {
+    input {
+      &::placeholder {
+        color: map.get($page-colors, "grey");
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    .select__input {
+      position: relative;
+      height: 40px;
+      vertical-align: middle;
+      padding: 13px 20px;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        background-image: url("../images/ArrowDown.png");
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        right: 14px;
+        top: 9px;
+      }
+    }
+
+    .select__dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid map.get($page-colors, "red");
+      overflow: hidden;
+
+      li {
+        font-size: 13px;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: map.get($page-colors, "grey");
+        }
+      }
+    }
+
+
+    &.open {
+      .select__input::after {
+        transform: rotate(180deg);
+      }
+
+      .select__dropdown {
+        display: block;
+      }
+    }
+  }
+
+  .form__checkbox {
+    .consent__text {
+      padding-top: 4px;
+    }
+  }
+
+  &__summary {
+    width: 50%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .summary__total,
+    .list__item {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+      border-radius: 6px;
+      justify-content: space-between;
+      align-items: center;
+      color: map.get($page-colors, "white");
+      font-size: 0.875rem;
+      display: none;
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    .summary__total {
+      width: 50%;
+      align-self: flex-end;
+      margin-top: 22px;
+      padding: 8px 20px;
+      background-color: map.get($page-colors, "blue");
+
+      .total__price {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+    }
+
+    .list__item {
+      padding: 6px 20px;
+      background-color: map.get($page-colors, "green");
+      margin-bottom: 8px;
+
+      .item {
+        &__price {
+          font-weight: 700;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    justify-content: flex-start;
+    color: map.get($page-colors, "grey");
+    font-size: 1rem;
+    margin: 1rem 0;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+
+      &:checked ~ span {
+        background-image: url("../images/Checkmark.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    span {
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid map.get($page-colors, "grey");
+      margin-right: 1rem;
+      cursor: context-menu;
+      border-radius: 4px;
+    }
+  }
+}
