@@ -131,10 +131,6 @@
       color: map.get($page-colors, "white");
       font-size: 0.875rem;
       display: none;
-
-      &.open {
-        display: flex;
-      }
     }
 
     .summary__total {
