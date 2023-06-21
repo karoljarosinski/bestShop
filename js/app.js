@@ -12,6 +12,7 @@ const accountingCalc = calcSummary.querySelector('[data-id="accounting"]');
 const rentalCalc = calcSummary.querySelector('[data-id="terminal"]');
 const inputsNumber = document.querySelectorAll('.form__input');
 const totalPrice = calcSummary.querySelector('.total__price');
+const allPrices = calcSummary.querySelectorAll('.item__price');
 
 inputsNumber.forEach(input => input.addEventListener('input', handleTyping));
 
@@ -89,7 +90,6 @@ function getPackagePrice(packages, packageName) {
 
 function getTotalPrice() {
     let sum = 0;
-    const allPrices = calcSummary.querySelectorAll('.item__price');
     Array.from(allPrices).forEach(el => sum += +el.innerHTML.replace('$', ''));
     return sum;
 }
