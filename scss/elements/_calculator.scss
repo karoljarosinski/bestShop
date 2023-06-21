@@ -165,24 +165,24 @@
   }
 
   .checkbox {
-    display: flex;
-    justify-content: flex-start;
-    color: map.get($page-colors, "grey");
-    font-size: 1rem;
-    margin: 1rem 0;
+      display: flex;
+      justify-content: flex-start;
+      color: map.get($page-colors, "grey");
+      font-size: 1rem;
+      margin: 1rem 0;
 
-    input {
-      position: absolute;
-      opacity: 0;
-      height: 0;
-      width: 0;
+      input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
 
-      &:checked ~ span {
-        background-image: url("../images/Checkmark.png");
-        background-repeat: no-repeat;
-        background-position: center;
+        &:checked ~ span {
+          background-image: url("../images/Checkmark.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
       }
-    }
 
     span {
       height: 1rem;
