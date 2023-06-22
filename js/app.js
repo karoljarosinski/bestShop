@@ -102,6 +102,6 @@ function setItemCalcForElement(element, text) {
     element.querySelector('.item__calc').innerText = text;
 }
 
-function showElement(element, boolean) {
-    boolean ? element.style.display = 'flex' : element.style.display = 'none';
+function showElement(element, isVisible) {
+    isVisible ? element.style.display = 'flex' : element.style.display = 'none';
 }
