@@ -13,6 +13,8 @@ const rentalCalc = calcSummary.querySelector('[data-id="terminal"]');
 const inputsNumber = document.querySelectorAll('.form__input');
 const totalPrice = calcSummary.querySelector('.total__price');
 const allPrices = calcSummary.querySelectorAll('.item__price');
+const productsInput = document.querySelector('#products');
+const ordersInput = document.querySelector('#orders');
 
 inputsNumber.forEach(input => input.addEventListener('input', handleTyping));
 
@@ -24,16 +26,12 @@ calcCheckboxes.forEach(el => el.addEventListener('click', handleCheckboxClick));
 
 function handleTyping(event) {
     if (event.target.id === 'products') {
-        showElement(productsCalc, true);
-        setItemCalcForElement(productsCalc, `${event.target.value} * $0.5`);
-        setPriceForElement(productsCalc, `$ ${event.target.value * 0.5}`)
+        inputValidation(event, productsInput, productsCalc)
         if (event.target.value === '') {
             showElement(productsCalc, false);
         }
     } else {
-        showElement(ordersCalc, true);
-        setItemCalcForElement(ordersCalc, `${event.target.value} * $0.5`);
-        setPriceForElement(ordersCalc, `$ ${event.target.value * 0.5}`)
+        inputValidation(event, ordersInput, ordersCalc);
         if (event.target.value === '') {
             showElement(ordersCalc, false);
         }
@@ -104,4 +102,22 @@ function setItemCalcForElement(element, text) {
 
 function showElement(element, isVisible) {
     isVisible ? element.style.display = 'flex' : element.style.display = 'none';
+}
+
+function inputValidation(event, inputElement, element) {
+    if (event.target.value >= 0) {
+        inputElement.style.color = 'grey';
+        inputElement.style.borderColor = '#08a6e4';
+        element.style.background = '#55dfb4';
+        showElement(element, true);
+        setItemCalcForElement(element, `${event.target.value} * $0.5`);
+        setPriceForElement(element, `$ ${event.target.value * 0.5}`)
+    } else {
+        inputElement.style.color = 'red';
+        inputElement.style.borderColor = 'red';
+        element.style.background = 'red';
+        showElement(element, true);
+        setItemCalcForElement(element, `Value has to be greater than 0`);
+        setPriceForElement(element, ``)
+    }
 }
