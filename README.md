@@ -1,1 +1,1 @@
-# BestShop webpage project
+# BestShop app available at https://bestshop-kj.netlify.app/
