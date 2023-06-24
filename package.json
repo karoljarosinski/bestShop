@@ -1,6 +1,7 @@
 {
   "name": "sass",
   "version": "2.0.0",
+  "homepage": "https://karoljarosinski.github.io/bestShop/",
   "source": "index.html",
   "scripts": {
     "start": "parcel",
